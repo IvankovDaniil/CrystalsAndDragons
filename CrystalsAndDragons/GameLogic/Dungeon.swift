@@ -12,6 +12,7 @@ class Dungeon {
     private var isHaveKey = false
     private var isHaveChest = false
     
+    //Создание карты
     func generateMap() {
         let (rows, cols) = calculateMatrixSize(for: numberOfRooms)
         var roomsCount = 0
@@ -34,6 +35,8 @@ class Dungeon {
         }
     }
     
+    
+    //Вспомогательный метод для лога карты
     func printMap() {
         print("=== Dungeon Map ===")
         for (i, row) in map.enumerated() {
